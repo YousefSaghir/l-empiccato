@@ -8,11 +8,10 @@ fetch("./world-0.json")
 let arr;
 let myDiv = document.querySelector(".inM");
 function createdInput(data) {
-  console.log(data);
   let numb = Math.floor(Math.random() * data.length);
-  console.log(data[numb]);
+
   arr = Array.from(data[numb]);
-  console.log(arr);
+
   arr.forEach(word => {
     if (word === " ") {
       let mySpan = document.createElement("span");
@@ -62,7 +61,6 @@ let arrSvg = [
 let i = 0;
 function chick(data) {
   let newArr = data.map(n => n.toLowerCase());
-  console.log(newArr);
   document.querySelectorAll(".caracter").forEach(btn => {
     btn.addEventListener("click", function() {
       if (newArr.indexOf(btn.textContent.toLowerCase()) >= 0) {
@@ -88,8 +86,6 @@ function chick(data) {
           document.querySelector("#Livello_1").innerHTML += arrSvg[i];
           i++;
         }
-
-        console.log("no");
       }
       this.classList.add("d-none");
       chickInput(newArr);
