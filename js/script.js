@@ -75,21 +75,14 @@ function chick(data) {
           })
           .forEach(num => {
             let myDivIn = document.querySelector(".inM").childNodes;
-            if (myDivIn[num].value == "") {
-              myDivIn[num].value = this.textContent;
-              myDivIn[num].style.background = "#00f";
-            } else {
-              document.body.innerHTML = ` <h1 class='h1'> SEI PROMESSO </h1>`;
-            }
+            myDivIn[num].value = this.textContent;
+            myDivIn[num].style.background = "#00f";
           });
       } else if (newArr.indexOf(btn.textContent.toLowerCase()) < 0) {
         if (i == arrSvg.length - 1) {
           document.querySelector("#Livello_1").innerHTML += arrSvg[i];
-          myDiv.innerHTML = `<h2 class='h2 text-danger'> ${data.join(
-            ""
-          )} </h2>`;
           setTimeout(() => {
-            document.body.innerHTML = ` <h1 class='h1 animate-color'> GAME OVER </h1>`;
+            document.body.innerHTML = ` <h1 class='h1 text-center animate-color'> GAME OVER </h1> `;
           }, 2000);
         } else {
           document.querySelector("#Livello_1").innerHTML += arrSvg[i];
