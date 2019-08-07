@@ -80,7 +80,7 @@ function chick(data) {
         if (i == arrSvg.length - 1) {
           document.querySelector("#Livello_1").innerHTML += arrSvg[i];
           setTimeout(() => {
-            document.body.innerHTML = ` <h1 class='h1 text-center animate-color'> GAME OVER </h1> `;
+            document.body.innerHTML = ` <h1 class='text-center animate-color'> GAME OVER </h1> `;
           }, 2000);
         } else {
           document.querySelector("#Livello_1").innerHTML += arrSvg[i];
@@ -107,7 +107,7 @@ function chickInput(data) {
     return n == 0;
   });
   if (chickArr == true) {
-    document.body.innerHTML = ` <h1 class='h1 text-center animate-color'>Winner </h1> <br> 
+    document.body.innerHTML = ` <h1 class='text-center animate-color'>Winner </h1> <br> 
     <h3 class='h3 text-center text-secondary'>${data.join("")}</h3>
     `;
   }

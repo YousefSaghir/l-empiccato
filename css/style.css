@@ -35,14 +35,8 @@ svg {
   border-radius: 5%;
 }
 
-@media (max-width: 767px) {
-  svg {
-    max-width: 50%;
-    height: auto;
-  }
-}
 .animate-color {
-  font-size: 15em;
+  font-size: 10em;
   -webkit-animation: colorChange 1s linear infinite;
   -o-animation: colorChange 0.5s linear infinite;
   -moz-animation: colorChange 0.5s linear infinite;
@@ -87,5 +81,15 @@ svg {
   to {
     color: yellow;
     text-shadow: 10px 10px 5px rgba(2, 2, 2, 0.5);
+  }
+}
+
+@media (max-width: 767px) {
+  svg {
+    max-width: 50%;
+    height: auto;
+  }
+  .animate-color {
+    font-size: 5em;
   }
 }
