@@ -60,23 +60,23 @@ let arrSvg = [
 ];
 let i = 0;
 function chick(data) {
-  let newArr = data.map(n => n.toLowerCase());
+  let newArr = data.map(n => n.toUpperCase());
   document.querySelectorAll(".caracter").forEach(btn => {
     btn.addEventListener("click", function() {
-      if (newArr.indexOf(btn.textContent.toLowerCase()) >= 0) {
+      if (newArr.indexOf(btn.textContent.trim()) >= 0) {
         newArr
           .map((x, n) => {
-            return x == btn.textContent.toLowerCase() ? n : " ";
+            return x == btn.textContent.trim() ? n : " ";
           })
           .filter(num => {
             return typeof num === "number";
           })
           .forEach(num => {
             let myDivIn = document.querySelector(".inM").childNodes;
-            myDivIn[num].value = this.textContent;
+            myDivIn[num].value = this.textContent.trim();
             myDivIn[num].style.background = "#00f";
           });
-      } else if (newArr.indexOf(btn.textContent.toLowerCase()) < 0) {
+      } else if (newArr.indexOf(btn.textContent.trim()) < 0) {
         if (i == arrSvg.length - 1) {
           document.querySelector("#Livello_1").innerHTML += arrSvg[i];
           setTimeout(() => {
